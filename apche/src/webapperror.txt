@@ -1,0 +1,34 @@
+Could not resolve archetype org.apache.maven.archetypes:maven-archetype-webapp:1.0 from any of the configured repositories.
+Could not resolve artifact org.apache.maven.archetypes:maven-archetype-webapp:pom:1.0
+Failure to transfer org.apache.maven.archetypes:maven-archetype-webapp:pom:1.0 from https://repo.maven.apache.org/maven2 was cached in the local repository,
+resolution will not be reattempted until the update interval of central has elapsed or updates are forced. Original error: Could not transfer artifact org.apache.maven.archetypes:maven-archetype-webapp:pom:1.0 from/to central (https://repo.maven.apache.org/maven2): Failed to authenticate with proxy
+Failure to transfer org.apache.maven.archetypes:maven-archetype-webapp:pom:1.0 from https://repo.maven.apache.org/maven2 was cached in the local repository,
+resolution will not be reattempted until the update interval of central has elapsed or updates are forced.
+Original error: Could not transfer artifact org.apache.maven.archetypes:maven-archetype-webapp:pom:1.0 from/to central (https://repo.maven.apache.org/maven2): Failed to authenticate with proxy
+
+
+My settings.xml file
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settings
+ xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ <pluginGroups/>
+ <proxies>
+  <!-- Proxy for HTTP -->
+  <proxy>
+   <id>optional</id>
+   <active>true</active>
+   <protocol>http</protocol>
+   <username></username>
+   <password></password>
+   <host>proxy.cognizant.com</host>
+   <port>6050</port>
+   <nonProxyHosts>local.net</nonProxyHosts>
+  </proxy>
+ </proxies>
+
+ <servers/>
+ <mirrors/>
+ <profiles/>
+</settings>
